@@ -30,7 +30,7 @@ Behind the scenes this will also call `bower install`, which sets up AngularJS d
 Local `sass` and `jade` files need to be compiled to `css` and `html`, do so by running: 
 
 ``` 
-npm build
+npm run build
 ```
 
 ### Run the Application
