@@ -1,0 +1,14 @@
+div.dealer-section
+    div.dealer-cards
+        div.dealer-hand
+            card(ng-repeat='card in dealerHand.cards' card='card')
+
+div.player-section
+    div.player-box(ng-repeat='seat in seats track by $index')
+        div.player-name {{seat.player.name}}
+        div.player-bet ${{seat.player.money}}
+        div.player-bet Bet: ${{seat.player.bet || 0}}
+        div.player-cards
+            div.hand(ng-repeat='hand in seat.hands track by $index')
+                div.hand-result {{hand.result || "&nbsp"}} 
+                card(ng-repeat='card in hand.hand.cards' card='card' stackindex='{{$index}}')

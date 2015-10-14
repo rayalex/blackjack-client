@@ -1,0 +1,24 @@
+{
+  "name": "blackjack-client",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A rather simplistic blackjack client",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.1",
+    "http-server": "^0.6.1",
+    "shelljs": "^0.2.6",
+    "jade": "latest",
+    "node-sass": "latest"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "build:html": "jade app/game/game.jade app/game/welcome.jade",
+    "build:css": "node-sass app/css/app.scss > app/css/app.css",
+    "build": "npm run build:html && npm run build:css"
+  }
+}

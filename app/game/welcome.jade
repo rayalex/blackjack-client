@@ -1,0 +1,8 @@
+div.welcome
+    div.spinner-loader(ng-show='loading')
+    div.table(ng-repeat='table in tables track by $index')
+        h3 Table {{$index + 1}}
+        ul
+            li(ng-repeat='player in table.players') {{player.player}}
+        div.button-container
+            a(href='#/game/{{table.id}}').button.red Watch
