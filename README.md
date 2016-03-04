@@ -4,7 +4,7 @@ A simplistic blackjack client, made with angularjs and some other things.
 
 ## Getting Started
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+To get you started you can simply clone the the repository and install the dependencies:
 
 ### Prerequisites
 
